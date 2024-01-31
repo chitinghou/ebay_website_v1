@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="centered-container">
+        <div class="header">
+            <img src="./images/eBayLogo.png" id="ebayLogo" alt="eBay Logo">
+            <h1>Shopping</h1>
+        </div>
+        <form id="myForm" method="GET">
+            <section>
+                <label for="keywords" class="form_option_title">Keywords<span class="red-text">*</span>:</label>
+                <input id="keywords" type="text" name="keywords" value="" required>
+            </section>
+            <section>
+                <label class="price_range form_option_title">Price Range:</label>
+                <span>From</span>
+                <input id="price_min" type="text" name="price_min">
+                <span>to</span>
+                <input id="price_max" type="text" name="price_max">
+            </section>
+            <section>
+                <label for="condition" class="form_option_title">Condition:</label>
+                <input type="checkbox" name="condition" id="New" value="1000">
+                <label for="condition">New</label>
+                <input type="checkbox" name="condition" id="Used" value="3000">
+                <label for="condition">Used</label>
+                <input type="checkbox" name="condition" id="Very Good" value="4000">
+                <label for="condition">Very Good</label>
+                <input type="checkbox" name="condition" id="Good" value="5000">
+                <label for="condition">Good</label>
+                <input type="checkbox" name="condition" id="Acceptable" value="6000">
+                <label for="condition">Acceptable</label>
+            </section>
+            <section>
+                <label for="seller" class="form_option_title">Seller:</label>
+                <input type="checkbox" name="seller" id="return accepted" value=true>
+                <label for="seller">Return Accepted</label>
+            </section>
+            <section>
+                <label for="shipping" class="form_option_title">Shipping:</label>
+                <input type="checkbox" name="shipping_free" id="free" value=true>
+                <label for="shipping">Free</label>
+                <input type="checkbox" name="shipping_expedited" id="expedited" value="Expedited">
+                <label for="shipping">Expedited</label>
+            </section>
+            <section>
+                <label for="sort" class="form_option_title">Sort by:</label>
+                <select name="sort" id="sort">
+                  <option value="BestMatch">Best Match</option>
+                  <option value="CurrentPriceHighest">Price: highest first</option>
+                  <option value="PricePlusShippingHighest">Price+Shipping: highest first</option>
+                  <option value="PricePlusShippingLowest">Price+Shipping: lowest first</option>
+                </select>
+            </section>
+            <section class="submission">
+                <input type="button" value="clear" onclick="clearData()" id="clear_button">
+                
+                <input type="submit" value="submit" id="submit_button">
+            </section>
+        </form>
+    
+        <div id="data-container">
+            
+        </div>
+        <div id="singleItem_container">
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
